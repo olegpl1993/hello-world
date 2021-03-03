@@ -1,0 +1,38 @@
+#include<iostream>
+#include<string>
+#include<cstdlib>
+#include<ctime>
+using namespace std; 
+
+class myClass {
+  private:
+    string name;
+    public:
+      myClass (string nm){
+        enterName (nm);
+      }
+      void enterName (string x){
+        name = x;
+      }
+      string backName(){
+        return name;
+      }
+};
+
+  
+int main() { 
+  setlocale (LC_ALL, "rus");
+  srand(time(0));
+  
+  myClass obj1("FirstObj");
+    cout <<obj1.backName() <<endl;
+  obj1.enterName("Hater");
+  cout <<obj1.backName() <<endl;
+  
+  myClass obj2("SecondObj");
+  cout <<obj2.backName() <<endl;
+
+
+    
+    return 0;
+}
